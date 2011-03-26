@@ -62,7 +62,8 @@ get_tasks() ->
      sin_task_clean:description(),
      sin_task_build:description(),
      sin_task_xref:description(),
-     sin_task_erts:description()].
+     sin_task_erts:description(),
+     sin_task_analyze:description()].
 
 %% @doc signal that an error has occured in the system
 -spec signal_error() -> ok.

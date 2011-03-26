@@ -58,6 +58,7 @@ manual_start() ->
 		   ewlib,
 		   ewrepo,
 		   tools,
+		   dialyzer,
 		   xmerl,
 		   mnesia,
 		   sgte,
