@@ -25,7 +25,8 @@
          term_to_list/1,
          to_bool/1,
          format_exception/1,
-         basename/1]).
+         basename/1,
+         get_erts_dir/0]).
 
 %%====================================================================
 %% API
@@ -162,6 +163,13 @@ basename(File) ->
     string().
 format_exception(Exception) ->
     sin_exceptions:format_exception(Exception).
+
+%% @doc Get the directory were erts is located
+-spec get_erts_dir() -> string().
+get_erts_dir() ->
+    Prefix = code:root_dir(),
+    ErtsVersion = erlang:system_info(version),
+    filename:join([Prefix, "erts-" ++ ErtsVersion]).
 
 %%====================================================================
 %% Internal functions
